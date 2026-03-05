@@ -19,7 +19,7 @@ On the other hand, a `List<dynamic>` can store values of any type, such as integ
 
 In most cases it is better to use a typed list like `List<int>` because it clearly shows what type of data the list should contain and helps avoid accidental bugs.
 
-## Q2.  In your findMax() function, why is it important to initialize your 'running maximum' variable to the first element of the list rather than to 0 or to a very small number? What could go wrong with the other approaches?
+## Q2.  In your `findMax()` function, why is it important to initialize your 'running maximum' variable to the first element of the list rather than to 0 or to a very small number? What could go wrong with the other approaches?
 
 
 In my `findMax()` function, I start the `max` variable with the first element of the list:
@@ -38,7 +38,7 @@ If I started with `0`, it could give wrong results when all the numbers are nega
 
 Using a very small number could also work sometimes, but it's not a good idea because we don't always know what values might appear in the list. Starting with the first element avoids these problems and makes the logic simpler.
 
-## Q3. Your calculateAverage() function calls calculateSum() internally. What software design principle does this demonstrate, and why is reusing existing functions preferable to duplicating code?
+## Q3. Your `calculateAverage()` function calls `calculateSum()` internally. What software design principle does this demonstrate, and why is reusing existing functions preferable to duplicating code?
 
 In my code, the `calculateAverage()` function calls `calculateSum()` instead of calculating the sum again.
 Here's exactly how it looks in my code:
@@ -83,7 +83,7 @@ for (int i = 0; i < numbers.length; i++) {
 I would usually use a for-in loop when I only need the values in the list.
 I would use a regular for loop when I need the index position or when I want more control over how the loop runs.
 
-## Q5.If someone calls your findMax() function with an empty list, what happens? How could you modify the function to handle that case safely?
+## Q5.If someone calls your `findMax()` function with an empty list, what happens? How could you modify the function to handle that case safely?
  
 ```markdown
 In my `findMax()` function, I added a check at the beginning:
@@ -142,7 +142,7 @@ This helped me understand the trade-offs: manual loops are more explicit, while 
 
 ## Task 2 – Async Calculator App (Q6–Q10)
 
- ## Q6.What is the difference between a synchronous function and an asynchronous function in Dart? In your Calculator class, why is divide() synchronous while computeAsync() is asynchronous?
+ ## Q6.What is the difference between a synchronous function and an asynchronous function in Dart? In your Calculator class, why is `divide()` synchronous while `computeAsync()` is asynchronous?
 
 Synchronous functions run right away and block other code until they finish. Asynchronous functions, on the other hand, return a Future and allow the program to keep running while waiting for the operation to finish.
 
@@ -152,7 +152,7 @@ In My Calculator class:
 
 `computeAsync()` is asynchronous because it simulates a delay using `Future.delayed()`. This allows the program to stay responsive during that pause, just like it would if it were waiting for a slow network or database operation.
 
- ## Q7.Explain the purpose of the await keyword in Dart. What happens if you forget to use await when calling an async function that returns a Future? What does your program print instead of the result?
+ ## Q7.Explain the purpose of the `await` keyword in Dart. What happens if you forget to use await when calling an async function that returns a Future? What does your program print instead of the result?
 
  The `await` keyword tells Dart to pause the current function until the Future completes and gives a result.
 
@@ -163,7 +163,7 @@ print(result); // Without await, prints: Instance of 'Future<double>'
 ```
 So without `await`,my program would print the Future object instead of the actual number.
 
-## Q8. What is the purpose of the try-catch block in your displayResult() method? What would happen if you removed it and then called displayResult(10, 0, 'divide')?
+## Q8. What is the purpose of the try-catch block in your `displayResult()` method? What would happen if you removed it and then called `displayResult(10, 0, 'divide')`?
 
 The try-catch block catches errors gracefully so the program doesn’t crash.
 
@@ -179,13 +179,13 @@ The `try-catch` captures it and prints a friendly message like:
 If we removed `try-catch`, the program would crash immediately with a red error, and the user wouldn’t get a clear message.
 When I first tested my divide function without try-catch, the program crashed with a red error in DartPad. This really helped me understand why exception handling is crucial in real applications where users might inputinvalid data.
 
-## Q9. Why is it good design to have divide() throw an ArgumentError rather than simply returning 0 or printing an error inside the divide() method itself? What principle of function design does this reflect?
+## Q9. Why is it good design to have `divide()` throw an ArgumentError rather than simply returning 0 or printing an error inside the `divide()` method itself? What principle of function design does this reflect?
 
 Throwing an error keeps the function focused on its single job: performing division. It doesn’t decide how to handle problems.
 
 This follows the Single Responsibility Principle: a function should either compute a result or handle errors, not both. By throwing an error, we let the calling function `(displayResult())` decide how to respond—print a message, log it, or show a UI alert. This makes the code more flexible and reusable.
 
-## Q10.. What does the async keyword on main() allow you to do? Could this assignment have been written without making main() async? Explain your answer.
+## Q10.. What does the async keyword on `main()` allow you to do? Could this assignment have been written without making `main() async`? Explain your answer.
  
 Marking `main()` as `async` allows us to use await inside it. This ensures that all asynchronous calculations complete before the program moves on.
 
