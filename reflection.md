@@ -6,7 +6,7 @@ on my experience implementing the code and understanding of Dart concepts.
 
 ## Task 1 – Number Analysis App (Q1–Q5)
 
-## Q1.What is the difference between a List<int> and a List<dynamic> in Dart? Why is it usually better to use a typed list like List<int>?
+## Q1.What is the difference between a `List<int>` and a `List<dynamic>` in Dart? Why is it usually better to use a typed list like List<int>?
 
 A `List<int>` means the list can only store integers. 
 In my code, I declared:
