@@ -51,6 +51,7 @@ Additional (Bonus) features implemented:
 ✅ Sorting the list without using `.sort()`
 ✅ Comparison with Dart collection methods
 ```
+---
 ```
 Task 1 Sample Output:
 Numbers: [34, -7, 89, 12, -45, 67, 3, 100, -2, 55]
@@ -112,3 +113,9 @@ These reflections explain the design decisions and Dart concepts used in the pro
 - Environment: DartPad
 - Version Control: Git & GitHub
 - Documentation: Markdown
+
+
+## 📧 Contact
+
+- Email: [eyuel.678@gmail.com](mailto:eyuel.678@gmail.com)
+- GitHub: [eyuel1777/dart-fundamentals-assignment](https://github.com/eyue1777/dart-fundamentals-assignment)
