@@ -81,6 +81,20 @@ Additional (Bonus) features implemented:
 ```
 ---
 
+```
+Task 2 Sample Output:
+ Welcome to Async Calculator App! 
+===============================
+result of add(10, 4) is: 14
+result of subtract(10, 4) is: 6
+result of multiply(10, 4) is: 40
+result of divide(10, 2) is: 5
+result of divide(15, 3) is: 5
+⚠ Oops! Invalid argument(s): Cannot divide by zero. That’s a no-go!
+⚠ Oops! Hmm… I don’t recognize "power". Try add, subtract, multiply, or divide.
+```
+---
+
 ## 🚀How to Run
 
 ### Using DartPad (Recommended)
