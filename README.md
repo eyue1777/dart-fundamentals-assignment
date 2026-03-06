@@ -13,7 +13,7 @@ lists, functions, classes, exception handling, and asynchronous programming.
 - **Student ID:** [ATE/0634/15]  
 - **Course:**  Mobile Application Development SECT-3113
 - **Assignment:** Dart Fundamentals  
-- **Submission Date:** [Due Feb 9, 2027]
+- **Submission Date:** [Due Mar 9, 2027]
 
 ---
 
